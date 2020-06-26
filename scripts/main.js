@@ -4,20 +4,15 @@ const atomicNumberDiv = document.getElementById('atomic-number-div')
 const symbolDiv = document.getElementById('symbol-div')
 const nameDiv = document.getElementById('name-div')
 
-// const knowledgePanelSymbol = document.getElementById('knowledge-symbol')
-const knowledgePanelDiv = document.getElementById('knowledge-panel-div')
-const knowledgePanel = document.createElement('div')
-knowledgePanel.setAttribute('class', 'knowledge-panel')
-
-knowledgePanelDiv.appendChild(knowledgePanel)
+const knowledgeAtomicNumber = document.getElementById('knowledge-atomic-number')
+const knowledgeSymbol = document.getElementById('knowledge-symbol')
+const knowledgeName = document.getElementById('knowledge-name')
 
 
-// function onClick() {
-
-// }
-
-function updateKnowledgePanel() {
-    console.log("loctite")
+function updateKnowledgePanel(e) {
+    knowledgeAtomicNumber.innerHTML = e.atomicNumber
+    knowledgeSymbol.innerHTML = e.symbol
+    knowledgeName.innerHTML = e.name
 }
 
 
@@ -35,6 +30,7 @@ request.onload = function () {
             pAtomicNumber.textContent = element.atomicNumber
             atomicNumberDiv.appendChild(pAtomicNumber)
             pAtomicNumber.onclick = function () {
+                updateKnowledgePanel(element)
                 console.log(element.atomicNumber)
             }
 
@@ -43,6 +39,7 @@ request.onload = function () {
             pSymbol.textContent = element.symbol
             symbolDiv.appendChild(pSymbol)
             pSymbol.onclick = function () {
+                updateKnowledgePanel(element)
                 console.log(element.symbol)
             }
 
@@ -51,6 +48,7 @@ request.onload = function () {
             pName.textContent = element.name
             nameDiv.appendChild(pName)
             pName.onclick = function () {
+                updateKnowledgePanel(element)
                 console.log(element.name)
             }
 

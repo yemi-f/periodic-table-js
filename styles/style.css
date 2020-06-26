@@ -4,7 +4,14 @@ body {
     background-color: #F8F6F4;
 }
 
-p {
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+#atomic-number,
+#symbol,
+#name {
     padding: 8px;
     box-shadow: 0px 0px 8px 4px rgba(205, 205, 205, 0.4);
 }
