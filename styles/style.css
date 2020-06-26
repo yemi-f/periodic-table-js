@@ -4,9 +4,21 @@ body {
     background-color: #F8F6F4;
 }
 
+#knowledge-panel-div {
+    background-color: #F8F6F4;
+    box-shadow: 0px 0px 8px 4px rgba(205, 205, 205, 0.4);
+    border-radius: 16px;
+}
+
 .vertical-center {
     display: flex;
     align-items: center;
+}
+
+
+
+.position-fixed {
+    right: 16px;
 }
 
 #atomic-number,
@@ -14,6 +26,7 @@ body {
 #name {
     padding: 8px;
     box-shadow: 0px 0px 8px 4px rgba(205, 205, 205, 0.4);
+    cursor: pointer;
 }
 
 #atomic-number {
