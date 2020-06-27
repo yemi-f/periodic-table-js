@@ -29,7 +29,6 @@ function updateKnowledgePanel(e) {
     knowledgeAtomicRadius.innerHTML = e.vanDelWaalsRadius
     knowledgeDensity.innerHTML = e.density
     knowledgeYearDiscovered.innerHTML = e.yearDiscovered
-    // knowledgeWiki.innerHTML = "<a href='https://www.wikipedia.org/wiki/" + e.name + "'" + e.name + "</a>"
     knowledgeWiki.innerHTML = "<a href='" + createWikiUrl(e.name) + "' target='_blank'>" + e.name + " <i class='fas fa-external-link-alt'></a>"
 }
 
@@ -45,6 +44,8 @@ request.onload = function () {
         data.forEach(element => {
             const pAtomicNumber = document.createElement('p')
             pAtomicNumber.setAttribute('id', 'atomic-number')
+            pAtomicNumber.setAttribute('data-toggle', 'modal')
+            pAtomicNumber.setAttribute('data-target', '#knowledge-modal')
             pAtomicNumber.textContent = element.atomicNumber
             atomicNumberDiv.appendChild(pAtomicNumber)
             pAtomicNumber.onclick = function () {
@@ -54,6 +55,8 @@ request.onload = function () {
 
             const pSymbol = document.createElement('p')
             pSymbol.setAttribute('id', 'symbol')
+            pSymbol.setAttribute('data-toggle', 'modal')
+            pSymbol.setAttribute('data-target', '#knowledge-modal')
             pSymbol.textContent = element.symbol
             symbolDiv.appendChild(pSymbol)
             pSymbol.onclick = function () {
@@ -63,6 +66,8 @@ request.onload = function () {
 
             const pName = document.createElement('p')
             pName.setAttribute('id', 'name')
+            pName.setAttribute('data-toggle', 'modal')
+            pName.setAttribute('data-target', '#knowledge-modal')
             pName.textContent = element.name
             nameDiv.appendChild(pName)
             pName.onclick = function () {

@@ -21,20 +21,23 @@
 </head>
 
 <body>
-    <!-- <header class="header">
-        <h1 class="h1">Periodic Table of Elements</h1>
-    </header> -->
-    <div class="row">
-        <div class="row col-6" id="element-body">
-            <div class="col-3 text-center" id="atomic-number-div">
-            </div>
-            <div class="col-3 text-center" id="symbol-div">
-            </div>
-            <div class="col-6" id="name-div">
-            </div>
+    <div class="row" id="element-body">
+        <div class="col-3 text-center" id="atomic-number-div">
         </div>
-        <div class="col-6 vertical-center position-fixed h-100 justify-content-end">
-            <div class="w-100 p-5" id="knowledge-panel-div">
+        <div class="col-3 text-center" id="symbol-div">
+        </div>
+        <div class="col-6" id="name-div">
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="knowledge-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 p-3" id="knowledge-panel-div">
+                <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="float-right">&times;</span>
+                </a>
                 <ul class="list-unstyled text-center">
                     <li class="h3 mb-0"><span id="knowledge-atomic-number">1</span></li>
                     <li class="display-1"><span id="knowledge-symbol">H</span></li>
@@ -73,7 +76,6 @@
                         </tr>
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>
