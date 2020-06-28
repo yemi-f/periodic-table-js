@@ -4,11 +4,23 @@ body {
     background-color: #F8F6F4;
 }
 
+#knowledge-panel-outer-div {
+    position: fixed;
+    right: 16px;
+}
+
 #knowledge-panel-div {
     background-color: #F8F6F4;
     border-radius: 16px;
 }
 
+<<<<<<< HEAD
+=======
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+>>>>>>> changed knowledge panel implementation
 
 #atomic-number,
 #symbol,
